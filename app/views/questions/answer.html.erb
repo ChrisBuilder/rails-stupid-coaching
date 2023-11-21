@@ -1,0 +1,24 @@
+<h1>You made it!!</h1>
+
+<p>Your Question was <%= params[:answer] %></p>
+<p> Your answer is <%= @answer[0] %></p>
+
+
+<%=
+input = params[:answer]
+
+def reply(input)
+  if input.end_with?("?")
+    return @answer[0]
+  elsif input == "I am going to work"
+    return @answer[1]
+  else
+    return @answer[2]
+  end
+end
+
+%>
+
+<p>You're coaches reply is:<%= reply(input) %></p>
+
+<!--lets code in the answers, if answer=? ret    -->
